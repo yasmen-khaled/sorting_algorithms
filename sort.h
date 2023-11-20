@@ -7,6 +7,6 @@
 #include <sys/types.h>
 
 void swap(int *xp, int *yp);
-void bubbleSort(int arr[], int n);
-void printArray(int arr[], int size);
+void bubble_sort(int *array, size_t size);
+void print_array(int *array, size_t size);
 #endif
