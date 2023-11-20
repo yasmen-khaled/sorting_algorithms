@@ -1,25 +1,25 @@
-#include "sort.h"
+#include <stdio.h>
 
 void swap(int *xp, int *yp)
 {
-   int temp = *xp;
-   *xp = *yp;
-   *yp = temp;
+ int temp = *xp;
+ *xp = *yp;
+ *yp = temp;
 }
 
-void bubbleSort(int arr[], int n)
+void bubble_sort(int *array, size_t size)
 {
-   int i, j;
-   for (i = 0; i < n-1; i++)
-       for (j = 0; j < n-i-1; j++)
-           if (arr[j] > arr[j+1])
-               swap(&arr[j], &arr[j+1]);
+ int i, j;
+ for (i = 0; i < size-1; i++)
+     for (j = 0; j < size-i-1; j++)
+         if (array[j] > array[j+1])
+             swap(&array[j], &array[j+1]);
 }
 
-void printArray(int arr[], int size)
+void print_array(int *array, size_t size)
 {
-   int i;
-   for (i=0; i < size; i++)
-       printf("%d ", arr[i]);
-   printf("\n");
+ size_t i;
+ for (i=0; i < size; i++)
+     printf("%d ", array[i]);
+ printf("\n");
 }
