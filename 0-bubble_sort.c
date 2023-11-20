@@ -6,12 +6,12 @@
  * @y:pointer.
  * Return: Non
  */
-void swap(int *x, int *y)
+void swap(int *xd, int *yd)
 {
-	int temp = *x;
+	int temp = *xd;
 
-	*x = *y;
-	*y = temp;
+	*xd = *yd;
+	*yd = temp;
 }
 
 /**
