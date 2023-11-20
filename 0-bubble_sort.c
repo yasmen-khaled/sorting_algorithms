@@ -1,27 +1,45 @@
 #include <stdio.h>
 
+/**
+ * bubble_sort - Sorts array
+ * @array:pointer
+ * @size:sizey.
+ * Return: Non
+ */
 void bubble_sort(int *array, size_t size)
 {
-   size_t i, j;
-   int swapped;
+	int x = 1
+   int i;
 
-   for (i = 0; i < size - 1; i++)
-   {
-       swapped = 0;
-
-       for (j = 0; j < size - i - 1; j++)
-       {
-           if (array[j] > array[j + 1])
-           {
-               int temp = array[j];
-               array[j] = array[j + 1];
-               array[j + 1] = temp;
-
-               swapped = 1;
-           }
-       }
-
+	for (; x < (int)size; x++)
+	{
+		for (i = 0; i < (int)size - i; i++)
+		{
+			if (array[i] > array[i + 1])
+			{
+				swap(&array[i + 1], &array[i]);
+				print_array(array, size);
+			}
+		}
+	}
+}
        if (!swapped)
            break;
    }
 }
+
+/**
+ * swap - Swaps
+ * @x:pointer
+ * @y:pointer
+ * Return: Non.
+ */
+void swap(int *i, int *p)
+{
+	int temp = *i;
+
+	*i = *y;
+	*p = temp;
+}
+
+
