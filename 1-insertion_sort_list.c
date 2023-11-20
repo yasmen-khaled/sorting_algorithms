@@ -2,21 +2,21 @@
 
 void insertion_sort_list(listint_t **list)
 {
-   listint_t *current, *next;
+  listint_t *current, *next, *insert;
 
-   if (!list || !(*list) || !((*list)->next))
-       return;
+  if (!list || !(*list) || !((*list)->next))
+      return;
 
-   for (current = (*list)->next; current != NULL; current = next)
-   {
-       next = current->next;
-       listint_t *insert = current->prev;
+  for (current = (*list)->next; current != NULL; current = next)
+  {
+      next = current->next;
+      insert = current->prev;
 
-       while (insert != NULL && current->n < insert->n)
-       {
-           node_swap(list, &insert, current);
-       }
-   }
+      while (insert != NULL && current->n < insert->n)
+      {
+          node_swap(list, &insert, current);
+      }
+  }
 }
 
 
