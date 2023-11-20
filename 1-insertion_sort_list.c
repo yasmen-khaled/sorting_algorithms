@@ -1,23 +1,24 @@
 #include "sort.h"
 
-void insertion_sort(listint_t **l)
+void insertion_sort_list(listint_t **list)
 {
- listint_t *curr, *n;
+   listint_t *current, *next;
 
- if (*l == NULL || (*l)->next == NULL)
-    return;
+   if (!list || !(*list) || !((*list)->next))
+       return;
 
- curr = (*l)->next;
- while (curr != NULL)
- {
-    n = curr;
-    while (n != *l && n->prev->n > n->n)
-    {
-        node_swap(l, &(n->prev), n);
-    }
-    curr = curr->next;
- }
+   for (current = (*list)->next; current != NULL; current = next)
+   {
+       next = current->next;
+       listint_t *insert = current->prev;
+
+       while (insert != NULL && current->n < insert->n)
+       {
+           node_swap(list, &insert, current);
+       }
+   }
 }
+
 
 void node_swap(listint_t **l, listint_t **curr, listint_t *n)
 {
