@@ -15,6 +15,7 @@ void insertion_sort_list(listint_t **list)
       while (insert != NULL && current->n < insert->n)
       {
           node_swap(list, &insert, current);
+          print_list((const listint_t *)*list);
       }
   }
 }
