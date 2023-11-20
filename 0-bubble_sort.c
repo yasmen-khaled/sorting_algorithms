@@ -1,20 +1,6 @@
 #include "sort.h"
 
 /**
- * swap - Swaps
- * @x:pointer.
- * @y:pointer.
- * Return: Non
- */
-void swap(int *xd, int *yd)
-{
-	int temp = *xd;
-
-	*xd = *yd;
-	*yd = temp;
-}
-
-/**
  * bubble_sort - Sorts an array
  * @array: pointer
  * @size: array.
@@ -36,4 +22,21 @@ void bubble_sort(int *array, size_t size)
 			}
 		}
 	}
+}
+
+
+
+
+/**
+ * swap - Swaps
+ * @x:pointer.
+ * @y:pointer.
+ * Return: Non
+ */
+void swap(int *xd, int *yd)
+{
+	int temp = *xd;
+
+	*xd = *yd;
+	*yd = temp;
 }
