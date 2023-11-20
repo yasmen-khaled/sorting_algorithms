@@ -11,7 +11,7 @@ void print_array(const int *array, size_t size)
     size_t a
 
     a = 0;
-    while (array && i < size)
+    while (array && a < size)
     {
         if (a > 0)
             printf(", ");
