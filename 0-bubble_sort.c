@@ -1,25 +1,45 @@
-#include <stdio.h>
+#include "sort.h"
 
-void swap(int *xp, int *yp)
+/**
+ * swap - Swaps
+ * @x:pointer.
+ * @y:pointer.
+ *
+ * Return: Nothing.
+ */
+void swap(int *x, int *y)
 {
- int temp = *xp;
- *xp = *yp;
- *yp = temp;
+	int temp = *x;
+
+	*x = *y;
+	*y = temp;
 }
 
+/**
+ * bubble_sort - Sorts an array
+ * @array:pointer
+ * @size:size of the array.
+ * Return: nothing.
+ */
 void bubble_sort(int *array, size_t size)
 {
- int i, j;
- for (i = 0; i < size-1; i++)
-     for (j = 0; j < size-i-1; j++)
-         if (array[j] > array[j+1])
-             swap(&array[j], &array[j+1]);
-}
+	int i, j;
+	bool swapped;
 
-void print_array(int *array, size_t size)
-{
- size_t i;
- for (i=0; i < size; i++)
-     printf("%d ", array[i]);
- printf("\n");
+	for (i = 0; i < size - 1; i++)
+	{
+		swapped = false;
+
+		for (j = 0; j < size - i - 1; j++)
+		{
+			if (array[j] > array[j + 1])
+			{
+				swap(&array[j], &array[j + 1]);
+				swapped = true;
+			}
+		}
+
+		if (!swapped)
+			break;
+	}
 }
