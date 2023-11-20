@@ -20,20 +20,20 @@ void insertion_sort_list(listint_t **list)
 }
 
 
-void node_swap(listint_t **l, listint_t **curr, listint_t *n)
+void node_swap(listint_t **j, listint_t **c, listint_t *x)
 {
- (*curr)->next = n->next;
- if (n->next != NULL)
-    n->next->prev = *curr;
+ (*c)->next = x->next;
+ if (x->next != NULL)
+    x->next->prev = *c;
 
- n->prev = (*curr)->prev;
- n->next = *curr;
+ x->prev = (*c)->prev;
+ x->next = *c;
 
- if ((*curr)->prev != NULL)
-    (*curr)->prev->next = n;
+ if ((*c)->prev != NULL)
+    (*c)->prev->next = x;
  else
-    *l = n;
+    *j = x;
 
- (*curr)->prev = n;
- *curr = n->prev;
+ (*c)->prev = x;
+ *c = x->prev;
 }
