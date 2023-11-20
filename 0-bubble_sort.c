@@ -22,11 +22,12 @@ void swap(int *xd, int *yd)
  */
 void bubble_sort(int *array, size_t size)
 {
-	int i = 1, x;
+	int a = 1;
+	int x;
 
-	for (; i < (int)size; i++)
+	for (; a < (int)size; a++)
 	{
-		for (x = 0; x < (int)size - i; x++)
+		for (x = 0; x < (int)size - a; x++)
 		{
 			if (array[x] > array[x + 1])
 			{
