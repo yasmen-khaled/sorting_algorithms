@@ -26,8 +26,8 @@ void bubble_sort(int *array, size_t size)
 
 /**
  * swap - Swaps
- * @x:pointer.
- * @y:pointer.
+ * @x:pointer
+ * @y:pointer
  * Return: Non
  */
 void swap(int *xd, int *yd)
