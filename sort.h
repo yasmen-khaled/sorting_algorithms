@@ -22,4 +22,6 @@ void print_list(const listint_t *list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void quick_sort(int *arrayToSort, size_t arraySize);
+void recursive(int *arrayToSort, int startIndex, int endIndex, size_t arraySize);
+
 #endif
