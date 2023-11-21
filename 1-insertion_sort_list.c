@@ -24,7 +24,7 @@ void insertion_sort_list(listint_t **list)
 }
 
 /**
- * swap - Swaps
+ * _swap - Swaps
  * @j:pointer
  * @c:pointer
  * @x:econd node.
