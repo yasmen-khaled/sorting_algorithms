@@ -29,7 +29,7 @@ void insertion_sort_list(listint_t **list)
  * @c:pointer
  * @x:econd node.
  */
-void swap(listint_t **j, listint_t **c, listint_t *x)
+void _swap(listint_t **j, listint_t **c, listint_t *x)
 {
 	(*c)->next = x->next;
 	if (x->next != NULL)
