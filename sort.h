@@ -25,5 +25,5 @@ void quick_sort(int *arrayToSort, size_t arraySize);
 void recursive(int *arrayToSort, int startIndex, int endIndex, size_t arraySize);
 int parti(int *arrayToSort, int startIndex, int endIndex, size_t arraySize);
 void swap(int *firstElement, int *secondElement);
-
+void swap(listint_t **j, listint_t **c, listint_t *x);
 #endif
