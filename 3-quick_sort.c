@@ -11,7 +11,7 @@ void quick_sort(int *arrayToSort, size_t arraySize)
 	if (arraySize < 2)
 		return;
 
-	Qsort(arrayToSort, 0, (int)arraySize - 1, arraySize);
+	recursive(arrayToSort, 0, (int)arraySize - 1, arraySize);
 }
 
 /**
@@ -28,10 +28,10 @@ void recursive(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 
 	if (startIndex < endIndex)
 	{
-		pivotIndex = lumoto_part(arrayToSort, startIndex, endIndex, arraySize);
+		pivotIndex = parti(arrayToSort, startIndex, endIndex, arraySize);
 
-		Qsort(arrayToSort, startIndex, pivotIndex - 1, arraySize);
-		Qsort(arrayToSort, pivotIndex + 1, endIndex, arraySize);
+		recursive(arrayToSort, startIndex, pivotIndex - 1, arraySize);
+		recursive(arrayToSort, pivotIndex + 1, endIndex, arraySize);
 	}
 }
 
