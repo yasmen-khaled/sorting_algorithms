@@ -34,8 +34,8 @@ void selection_sort(int *array, size_t size)
 
 /**
  * swap - Swaps
- * @x:pointer
- * @y:pointer
+ * @xd:pointer
+ * @yd:pointer
  * Return:non
  */
 void swap(int *xd, int *yd)
