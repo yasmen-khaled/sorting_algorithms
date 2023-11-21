@@ -1,5 +1,8 @@
 #include "sort.h"
-
+/**
+ * insertion_sort_list - Sort linked list
+ * @list:pointer
+ */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *next, *insert;
@@ -20,8 +23,13 @@ void insertion_sort_list(listint_t **list)
 	}
 }
 
-
-void node_swap(listint_t **j, listint_t **c, listint_t *x)
+/**
+ * swap - Swaps
+ * @j:pointer
+ * @c:pointer
+ * @x:econd node.
+ */
+void swap(listint_t **j, listint_t **c, listint_t *x)
 {
 	(*c)->next = x->next;
 	if (x->next != NULL)
