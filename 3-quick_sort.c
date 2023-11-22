@@ -48,7 +48,6 @@ int parti(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 {
 	int pivot = arrayToSort[endIndex];
 	int index = startIndex, x, allElementsEqual = 1;
-
 	for (x = startIndex; x < endIndex; x++)
 	{
 		if (arrayToSort[x] != pivot)
