@@ -11,7 +11,7 @@ void quick_sort(int *arrayToSort, size_t arraySize)
 	if (arraySize < 2)
 		return;
 
-	rec(arrayToSort, 0, (int)arraySize - 1, arraySize);
+	recursiv(arrayToSort, 0, (int)arraySize - 1, arraySize);
 }
 
 /**
@@ -22,7 +22,7 @@ void quick_sort(int *arrayToSort, size_t arraySize)
  * @arraySize:size of the array.
  */
 
-void rec(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
+void recursiv(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 {
 	int pivotIndex;
 
@@ -30,8 +30,8 @@ void rec(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 	{
 		pivotIndex = parti(arrayToSort, startIndex, endIndex, arraySize);
 
-		rec(arrayToSort, startIndex, pivotIndex - 1, arraySize);
-		rec(arrayToSort, pivotIndex + 1, endIndex, arraySize);
+		recursiv(arrayToSort, startIndex, pivotIndex - 1, arraySize);
+		recursiv(arrayToSort, pivotIndex + 1, endIndex, arraySize);
 	}
 }
 
