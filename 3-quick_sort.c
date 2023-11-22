@@ -70,8 +70,8 @@ int parti(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 }
 /**
  * swap - Swaps
- * @x:pointer.
- * @y:pointer.
+ * @firstElement:pointer.
+ * @secondElement:pointer.
  *Return: non
  */
 void swap(int *firstElement, int *secondElement)
