@@ -11,18 +11,18 @@ void quick_sort(int *arrayToSort, size_t arraySize)
 	if (arraySize < 2)
 		return;
 
-	recursive(arrayToSort, 0, (int)arraySize - 1, arraySize);
+	rec(arrayToSort, 0, (int)arraySize - 1, arraySize);
 }
 
 /**
- * recursive - Manage
+ * rec - Manage
  * @arrayToSort:pointer to the array to sort.
  * @startIndex: The start position.
  * @endIndex: The end position.
  * @arraySize:size of the array.
  */
 
-void recursive(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
+void rec(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 {
 	int pivotIndex;
 
@@ -30,8 +30,8 @@ void recursive(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 	{
 		pivotIndex = parti(arrayToSort, startIndex, endIndex, arraySize);
 
-		recursive(arrayToSort, startIndex, pivotIndex - 1, arraySize);
-		recursive(arrayToSort, pivotIndex + 1, endIndex, arraySize);
+		rec(arrayToSort, startIndex, pivotIndex - 1, arraySize);
+		rec(arrayToSort, pivotIndex + 1, endIndex, arraySize);
 	}
 }
 
@@ -48,6 +48,7 @@ int parti(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 {
 	int pivot = arrayToSort[endIndex];
 	int index = startIndex, x, allElementsEqual = 1;
+
 	for (x = startIndex; x < endIndex; x++)
 	{
 		if (arrayToSort[x] != pivot)
@@ -64,8 +65,7 @@ int parti(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 	swap(&arrayToSort[index], &arrayToSort[endIndex]);
 	if (index != x && !allElementsEqual)
 		print_array(arrayToSort, arraySize);
-
-	return (index);
+		return (index);
 }
 /**
  * swap - Swaps
