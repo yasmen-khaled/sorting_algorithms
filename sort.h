@@ -21,7 +21,7 @@ void print_list(const listint_t *list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void quick_sort(int *arrayToSort, size_t arraySize);
-void rec(int *arrayToSort, int startIndex, int endIndex, size_t arraySize);
+void recursiv(int *arrayToSort, int startIndex, int endIndex, size_t arraySize);
 int parti(int *arrayToSort, int startIndex, int endIndex, size_t arraySize);
 void swap(int *firstElement, int *secondElement);
 void _swap(listint_t **j, listint_t **c, listint_t *x);
