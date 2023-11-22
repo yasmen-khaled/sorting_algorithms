@@ -46,7 +46,7 @@ void recursiv(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 
 int parti(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 {
-	int pivot = arrayToSort[endIndex];
+int pivot = arrayToSort[endIndex];
 	int index = startIndex, x, allElementsEqual = 1;
 
 	for (x = startIndex; x < endIndex; x++)
@@ -65,7 +65,8 @@ int parti(int *arrayToSort, int startIndex, int endIndex, size_t arraySize)
 	swap(&arrayToSort[index], &arrayToSort[endIndex]);
 	if (index != x && !allElementsEqual)
 		print_array(arrayToSort, arraySize);
-		return (index);
+
+	return (index);
 }
 /**
  * swap - Swaps
